@@ -2,262 +2,31 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
-    <title>ESTUDO DE CASO</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desenho por Comando de Voz</title>
+  <!--Importando o Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <!--Importando o Jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <!--Importando o p5-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <!--Chamando o CSS-->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <h4 style="text-align: center;font-family: 'Lexend Tera', sans-serif;">
-            <span>ESTUDO DE CASO ENTRE GOOGLE LENS E MOBILENET</span>
-            <br><br>
-            GOOGEL LENS <img src="https://c-amilarorigues.github.io/PROJETO-C120-C121/gl.png" style="width: 150px;">
-            <p>
-                <b style="color: red;">X</b>
-            </p>
-            <br>
-            <p class="btn btn-primary" style="font-size: 20px;">Mobilenet</p>
-        </h4>
-
-        <hr>
-        <ol style="padding:0px;">
-            <div class="bob col-xs-12">
-
-                <li class="col-sm-4 col-xs-12">
-                    <b style="color: white;">Imagem Teste: </b><img src="enfeite.jpg" class="img-responsive">
-                </li>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>GOOGLE LENS</b>:
-                    <span>Coração</span>
-                </h5>
-                <h5 class="col-sm-4 col-xs-12">Resultado no<b> Modelo Mobilenet</b>:
-                    <span>Máscara</span>
-                </h5>
-
-                <div class="bob3" class="col-xs-12">
-                    <h4>Resultado:</h4>
-                    <hr>
-                    <h4>O Google Lens acertou</h4>
-                </div>
-
-            </div>
-            <br>
-
-            <div class="bob col-xs-12">
-
-                <li class="col-sm-4 col-xs-12">
-                    <b style="color: white;">Imagem Teste: </b><img src="gloss.jpg" class="img-responsive">
-                </li>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>GOOGLE LENS</b> -
-                    <span>Gloss</span>
-                </h5>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>Modelo Mobilenet </b> -
-                    <span>Cinto de Segurança</span>
-                </h5>
-
-                <div class="bob3" class="col-xs-12">
-                    <h4>Resultado:</h4>
-                    <hr>
-                    <h4>O Google Lens acertou</h4>
-                </div>
-
-            </div>
-
-            <br>
-
-            <div class="bob col-xs-12">
-
-                <li class="col-sm-4 col-xs-12">
-                    <b style="color: white;">Imagem Teste: </b><img src="oculos.jpg" class="img-responsive">
-                </li>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>GOOGLE LENS</b> -
-                    <span>Armação de óculos, óculos</span>
-                </h5>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>Modelo Mobilenet </b> -
-                    <span>Óculos</span>
-                </h5>
-
-                <div class="bob3" class="col-xs-12">
-                    <h4>Resultado:</h4>
-                    <hr>
-                    <h4>Tanto o Google Lens como o Mobilenet acertaram</h4>
-                </div>
-
-            </div>
-
-            <br>
-
-            <div class="bob col-xs-12">
-
-                <li class="col-sm-4 col-xs-12">
-                    <b style="color: white;">Imagem Teste: </b><img src="calendario.jpg" class="img-responsive">
-                </li>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>GOOGLE LENS</b> -
-                    <span>Calendário e Madeira</span>
-                </h5>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>Modelo Mobilenet </b> -
-                    <span>Igreja</span>
-                </h5>
-
-                <div class="bob3" class="col-xs-12">
-                    <h4>Resultado:</h4>
-                    <hr>
-                    <h4>O Google Lens acertou</h4>
-                </div>
-
-            </div>
-
-            <br>
-
-            <div class="bob col-xs-12">
-
-                <li class="col-sm-4 col-xs-12">
-                    <b style="color: white;">Imagem Teste: </b><img src="anel.jpg" class="img-responsive">
-                </li>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>GOOGLE LENS</b> -
-                    <span>Unha e Anel</span>
-                </h5>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>Modelo Mobilenet </b> -
-                    <span>Ponto de luz, ponto</span>
-                </h5>
-
-                <div class="bob3" class="col-xs-12">
-                    <h4>Resultado:</h4>
-                    <hr>
-                    <h4>O Google Lens acertou</h4>
-                </div>
-
-            </div>
-
-            <br>
-            <div class="bob col-xs-12">
-
-                <li class="col-sm-4 col-xs-12">
-                    <b style="color: white;">Imagem Teste: </b><img src="controle.jpg" class="img-responsive">
-                </li>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>GOOGLE LENS</b> -
-                    <span>Controle Xbox, controle</span>
-                </h5>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>Modelo Mobilenet </b> -
-                    <span>Mochila</span>
-                </h5>
-
-                <div class="bob3" class="col-xs-12">
-                    <h4>Resultado:</h4>
-                    <hr>
-                    <h4>O Google Lens acertou</h4>
-                </div>
-
-            </div>
-
-            <br>
-
-            <div class="bob col-xs-12">
-
-                <li class="col-sm-4 col-xs-12">
-                    <b style="color: white;">Imagem Teste: </b><img src="regua.jpg" class="img-responsive">
-                </li>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>GOOGLE LENS</b> -
-                    <span>Barra de led</span>
-                </h5>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>Modelo Mobilenet </b> -
-                    <span>Régua</span>
-                </h5>
-
-                <div class="bob3" class="col-xs-12">
-                    <h4>Resultado:</h4>
-                    <hr>
-                    <h4>O Mobilenet acertou</h4>
-                </div>
-
-            </div>
-
-            <br>
-
-            <div class="bob col-xs-12">
-
-                <li class="col-sm-4 col-xs-12">
-                    <b style="color: white;">Imagem Teste: </b><img src="caneca.jpg" class="img-responsive">
-                </li>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>GOOGLE LENS</b> -
-                    <span>Caneca</span>
-                </h5>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>Modelo Mobilenet </b> -
-                    <span>Caneca</span>
-                </h5>
-
-                <div class="bob3" class="col-xs-12">
-                    <h4>Resultado:</h4>
-                    <hr>
-                    <h4>Tanto o Google Lens como o Mobilenet acertaram</h4>
-                </div>
-
-            </div>
-
-            <br>
-
-            <div class="bob col-xs-12">
-
-                <li class="col-sm-4 col-xs-12">
-                    <b style="color: white;">Imagem Teste: </b><img src="garrafa.jpg" class="img-responsive">
-                </li>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>GOOGLE LENS</b> -
-                    <span>Garrafa e squeeze</span>
-                </h5>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>Modelo Mobilenet </b> -
-                    <span>Batom</span>
-                </h5>
-
-                <div class="bob3" class="col-xs-12">
-                    <h4>Resultado:</h4>
-                    <hr>
-                    <h4>O Google Lens acertou</h4>
-                </div>
-
-            </div>
-
-            <br>
-
-            <div class="bob col-xs-12">
-
-                <li class="col-sm-4 col-xs-12">
-                    <b style="color: white;">Imagem Teste: </b><img src="spray.jpg" class="img-responsive">
-                </li>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>GOOGLE LENS</b> -
-                    <span>Pulverizador, spray</span>
-                </h5>
-                <h5 class="col-sm-4 col-xs-12">Resultado no <b>Modelo Mobilenet </b> -
-                    <span>Dispensa de sabão</span>
-                </h5>
-
-                <div class="bob3" class="col-xs-12">
-                    <h4>Resultado:</h4>
-                    <hr>
-                    <h4>O Google Lens acertou.</h4>
-                </div>
-
-            </div>
-
-            <br>
-
-        </ol>
-        <br><br>
-        <h4 class="col-xs-12 result">
-            Testei 10 imagens.<br>
-            <b>GOOGLE LENS</b> previou 9 delas corretamente, e o <b>MOBILENET</b> previu apenas 2, ou seja, foi menos preciso.<br>
-            Então, de acordo com meu estudo de caso, o <b>GOOGLE LENS</b> é mais preciso.
-        </h4>
-    </div>
-    <br><br>
-
-    <div class="copy_right_footer">
-        Desenvolvido por: JOYCE
-    </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <br>
+  <h2>Desenho por Comando de Voz</h2>
+  <h3>Fale um número para desenhar maçãs</h3>
+  <span id="status"></span>
+  <button onclick="start();" class="btn btn-primary">Desenhar</button>
+  <br><br>
+  <script src="main.js"></script>
 
 </body>
 
